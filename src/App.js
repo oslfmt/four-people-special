@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import EnvironmentsGrid from './EnvironmentsGrid';
+import Playlist from './Playlist';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <div className="row">
+          <div className="col-8">
+            <h1 className="h2 m-4">Environments</h1>
+          </div>
+          <div className="col-4">
+            <h1 className="h2 m-4">Music</h1>
+          </div>
+        </div>
+        
+        <div className="row">
+            <div className="col-8">
+              <EnvironmentsGrid />
+            </div>
+            <div className="col-4">
+              <Playlist />
+            </div>
+          </div>
+      </div>
     </div>
   );
 }
